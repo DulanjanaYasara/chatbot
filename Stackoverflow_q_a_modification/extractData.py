@@ -4,43 +4,59 @@ from bs4 import BeautifulSoup
 # import re
 
 def extractall(html):
+    """Extracting the text from the HTML and checking whether there are codes or blockquotes"""
     soup = BeautifulSoup(html, 'lxml')
+
+    # Obtaining the code segments from the body
+    codes = [c.get_text() for c in soup('code')]
+    errors = [e.get_text() for e in soup('blockquote')]
+
+    has_codes = False
+    for code in codes:
+        if list(code).count('\n') > 2:
+            has_codes = True
+
+    has_errors = False
+    for error in errors:
+        if list(error).count('\n') > 2:
+            has_errors = True
+
+    # Check whether the HTML has codes or blockquotes
+    has_codes_errors = has_codes or has_errors
+
     data = list(soup.recursiveChildGenerator())
     visit_to_a = False
     output = ''
 
+    # Working with the hyperlink and images with links
     for value in data:
         if value.name == 'a':
             visit_to_a = True
             output += value.text
             if hasattr(value, 'href') and value.text != value['href']:
                 output += ' [' + value['href'] + '] '
+
         elif value.name is None and not visit_to_a:
             output += value
         else:
             visit_to_a = False
 
     # Converting HTML entities into Unicode characters
-    return unicode(output)
+    output = unicode(output)
 
-    # def visible(element):
-    #     if element.parent.name in ['style', 'script', '[document]', 'head', 'title']:
-    #         return False
-    #     # elif re.match('<!--.*-->', str(element)):
-    #     #     return False
-    #     else:
-    #         return True
-    #
-    # result = filter(visible, data)
-    # output = ''.join(result)
-    # return output
+    return output, has_codes_errors
 
-    # htmll = ''' <p>I ain&#39;t able to login Nope - at least the cache won\'t return it &amp; &quot; &lt; &gt;</p> <p>
-    # The default token lifetime can be set in the <strong>identity.xml</strong> config file,
-    # see <a href="https://docs.wso2.com/display/AM160/Working+with+Access+Tokens#WorkingwithAccessTokens-changeDef"
-    # rel="nofollow noreferrer">the documentation</a> </p> '''
-    # html='''<p><a
-    # href="https://i.stack.imgur.com/BVXK5.png"rel="nofollow noreferrer"><img
-    # src="https://i.stack.imgur.com/BVXK5.png" alt="enter image description here"></a></p><p>In order to achieve
-    # this, you can simply create an API like below</p>'''
-    # print extractall(htmll)
+
+def print_all(no_q_accepted_answers, no_given_bot):
+    """Printing the efficiency of the bot w.r.t. Stackoverflow accepted answer questions"""
+    print '___________________Process succeed___________________'
+    print 'Number of questions with accepted answers :', no_q_accepted_answers
+    print 'Number of questions given to the bot      :', no_given_bot
+    print 'As a percentage                           :', round(no_given_bot / float(no_q_accepted_answers) * 100,
+                                                               0), '%'
+
+# TEST CASE
+# htmll = '''
+# <p>I could get some response like this.</p>
+# <pre><code>"    {"name":"vesselStatus","type":"string","value":"S","scope":"global"},</code></pre>'''
+# print extractall(htmll)

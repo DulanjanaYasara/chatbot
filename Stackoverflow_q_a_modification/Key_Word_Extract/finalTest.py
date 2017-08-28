@@ -149,6 +149,8 @@ class KeyWordExtract:
         word_score, total_words = self._generate_word_scores(keywords)
         phrase_score = self._generate_phrase_score(word_score, keywords)
         print phrase_score
+        # print nltk.pos_tag([key for key in phrase_score])
+
         print self._essential_keywords(phrase_score, total_words)
 
     def test(self):

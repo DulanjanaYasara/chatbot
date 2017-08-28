@@ -68,5 +68,5 @@ applications. Instead of having to make each of your applications communicate di
 various formats, each application simply communicates with the ESB, which handles transforming and routing the
 messages to their appropriate destinations."""
 
-candidates = ['enterprise service bus', 'applications communicate directly', 'communicates with ESB']
+candidates = ['enterprise service bus', 'applications communicate directly', 'communicates with the ESB']
 print extract_candidate_features(candidates, doc_text, "Overview of WSO2 ESB", "Introducing the ESB")

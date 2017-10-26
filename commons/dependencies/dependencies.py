@@ -147,7 +147,8 @@ def test():
     # The test case
     dependency_parse = CoreNLP()
     q_text = '''How to add a scheduled task into ESB?'''
-    a_text = '''Yes. For information, contact us.'''
+    a_text = '''A scheduled task to ESB can be added to ESB by doing this.'''
+    print list(generate(dependency_parse.parse(q_text)))
     print list(generate(dependency_parse.parse(a_text)))
 
 

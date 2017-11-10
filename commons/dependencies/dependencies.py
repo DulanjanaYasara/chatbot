@@ -1,20 +1,23 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*
 from re import search, split
 
 from nltk import WordNetLemmatizer
+from unidecode import unidecode
 
 from main import CoreNLP
 
 
 def __coreference(parsed_text):
     """Used to extract the coreference of words from the dependency parsed text
-    :type parsed_text: dict
-    i.e. dependency parsed text from the StanfordCore NLP
-    :return coref_dict:dict
-    i.e. {word: [[sentence_no,word_coreference_instance ]],...}
-    """
-    # A dictionary to store the word and it's coreferece
-    coref_dict = {}
 
+    :type parsed_text: dict
+    :param parsed_text: Parsed text from the StanfordCore NLP
+    :return: i.e. {word: [[sentence_no,word_coreference_instance ]],...}
+    :rtype: dict
+    """
+    # A dictionary to store the word and it's coreference
+    coref_dict = {}
     for coref in parsed_text['corefs'].keys():
         head_noun = ''
         position = []
@@ -29,12 +32,12 @@ def __coreference(parsed_text):
 
 
 def __prep_dic(co_dict):
-    """
-    Used to keep the coreferences in a sentence based dict keys
+    """Used to keep the coreferences in a sentence based dict keys
+
     :type co_dict: dict
-    i.e. {word: [[sentence_no,word_coreference_instance ]],...}
-    :return coref_dict:dict
-    i.e. {sentence_no:[corefernced_word,...],...}
+    :param co_dict: i.e. {word: [[sentence_no,word_coreference_instance ]],...}
+    :return: coref_dict i.e. {sentence_no:[corefernced_word,...],...}
+    :rtype: dict
     """
     # A dictionary to store the sentence number and it's coreferenced words
     prep_dict = {}
@@ -46,28 +49,36 @@ def __prep_dic(co_dict):
             else:
                 # create a new list
                 prep_dict[value[0]] = [key]
-
     return prep_dict
 
 
 def generate(dependency_parsed_text):
-    """
-    Used to obtain the dependencies of a text
+    """Used to obtain the dependencies of a text
+
     :type dependency_parsed_text: dict
-    i.e. dependency parsed text from the StanfordCore NLP
-    :return coreferences:list
-    i.e. [{governor_word:noun_or_verb ,dependent_word:noun_or_verb},...]
+    :param dependency_parsed_text: i.e. dependency parsed text from the StanfordCore NLP
+    :return: coreferences i.e. [{governor_word:noun_or_verb ,dependent_word:noun_or_verb},...]
+    :rtype: list
     """
     prep_dict = __prep_dic(__coreference(dependency_parsed_text))
 
     # To obtain the sentence number
     sent_num = 1
     for sentence in dependency_parsed_text['sentences']:
-        # A dict to keep the word index of nouns, verbs and pronouns
+        # A dict to keep the word index of nouns, verbs, pronouns and WH verbs
         indices = {element['index']: element['pos'][0] for element in sentence['tokens'] if
-                   search(r'NN.*|VB.*|PRP.*', element['pos'])}
+                   search(r'NN.*|VB.*|PRP.*|W.+', element['pos'])}
         # Adding important element of ROOT
         indices[0] = 'R'
+
+        # Checking for the availability of the 'ROOT' in the indices list. If not, adding them to 'indices' list,
+        # without considering the pos tag form
+        if sentence['basicDependencies'][0]['dep'] == 'ROOT':
+            root_index = sentence['basicDependencies'][0]['dependent']
+            if root_index not in indices:
+                for element in sentence['tokens']:
+                    if element['index'] == root_index:
+                        indices[root_index] = element['pos']
 
         # Combining the prep_dict and indices dict
         combined_prep_dict = {}
@@ -75,10 +86,18 @@ def generate(dependency_parsed_text):
             coref_prep_list = prep_dict[sent_num]
             prep_indices = [index for index in indices.keys() if indices[index] == 'P']
             for index, value in enumerate(prep_indices):
-                combined_prep_dict[value] = coref_prep_list[index]
+
+                if len(coref_prep_list) > index:
+                    combined_prep_dict[value] = coref_prep_list[index]
+                else:
+                    # Removing the prepositions which doesn't have coreferences from the indices dict
+                    del indices[value]
+        else:
+            indices = {k: v for k, v in indices.items() if v != 'P'}
 
         coreferences = []
-        for value in sentence['enhancedPlusPlusDependencies']:
+        # Out of enhancedDependencies,basicDependencies and enhancedPlusPlusDependencies
+        for value in sentence['basicDependencies']:
             if value['dependent'] in indices.keys() and value['governor'] in indices.keys():
 
                 # Replacing the coreferenced words of dependent and the governor
@@ -86,7 +105,7 @@ def generate(dependency_parsed_text):
                     value['dependentGloss'] = combined_prep_dict[value['dependent']]
                 if value['governor'] in combined_prep_dict.keys():
                     value['governorGloss'] = combined_prep_dict[value['governor']]
-                # Lemmatizing the dependent and the governor
+                # Lemming the dependent and the governor
                 lemmatized_governor = lemmatizer(value['governorGloss'], indices[value['governor']])
                 lemmatized_dependent = lemmatizer(value['dependentGloss'], indices[value['dependent']])
                 coreferences.append([(value['governor'], lemmatized_governor, indices[value['governor']]),
@@ -97,7 +116,8 @@ def generate(dependency_parsed_text):
 
 def tokenize_words(sentence, preserve_case=True):
     """Word separation in a sentence
-    :param preserve_case:Boolean
+
+    :type preserve_case: bool
     :type sentence: str
     """
     words = []
@@ -112,7 +132,8 @@ def tokenize_words(sentence, preserve_case=True):
 
 def lemmatizer(entity, v_n):
     """Used to lemmatize the entities checking if it's a verb or a noun
-    :param v_n: char
+
+    :type v_n: char
     :type entity: str
     """
 
@@ -123,12 +144,12 @@ def lemmatizer(entity, v_n):
         if search('([A-Z]s)$', entity):
             return entity[:-1]
         else:
-            # Lemmatizing the last word
+            # Lemming the last word
             words = tokenize_words(entity.lower())
-            last_word = words.pop()
+            last_word = unidecode(words.pop())
             lem_word = WordNetLemmatizer().lemmatize(last_word.lower(), pos='n')
-            # The lemmatized word should have at least more than one character
-            # (Unless the lemmatized word of 'xs', 'x' will also be considered)
+            # The lemmed word should have at least more than one character
+            # (Unless the lemmed word of 'xs', 'x' will also be considered)
             if len(lem_word) > 1:
                 out = ''
                 for i, e in enumerate(lem_word):
@@ -144,12 +165,19 @@ def lemmatizer(entity, v_n):
 
 
 def test():
-    # The test case
     dependency_parse = CoreNLP()
-    q_text = '''How to add a scheduled task into ESB?'''
-    a_text = '''A scheduled task to ESB can be added to ESB by doing this.'''
-    print list(generate(dependency_parse.parse(q_text)))
-    print list(generate(dependency_parse.parse(a_text)))
+    text1 = ''' What is the mediator to be used for lightweight transformations on messages?'''
+    text2 = '''BPMN Explorer is the web application that allows you to view and work with BPMN processes. It is a 
+    Jaggery-based, lightweight web application that you can customize and deploy in a web server. '''
+    text3 = '''In this case, the SOAP Header field To is matched against a regular expression that checks to see 
+    whether the To field contains StockQuote. validate [line 34 in ESB config] - Performs validation on the SOAP body 
+    using the XML Schema defined in the localEntry (line 2 in ESB config). on-fail [line 36 in ESB config] - If the 
+    validation fails, the on-fail element provides a detour, which can be used to channel the message through a 
+    different route and ultimately passed on to the intended service. In the example scenario, a fault is produced 
+    and the fault is sent back to the requesting client. send [line 44 in ESB config] - the send mediator is used to 
+    send the message to the intended receiver - however if the makeFault inside the on-fail element (line 37 in ESB 
+    config) is executed before this mediator is reached, then the fault is returned to the requesting client. '''
+    print list(generate(dependency_parse.parse(text3)))
 
 
 if __name__ == "__main__":

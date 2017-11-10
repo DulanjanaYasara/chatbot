@@ -24,10 +24,12 @@ class Node(object):
             .addkid(Node("e"))
     """
 
-    def __init__(self, label, value=0, children=None):
+    def __init__(self, label, pos='N', value=1, children=None, index=0):
         self.label = label
         self.children = children or list()
         self.value = value
+        self.pos = pos
+        self.index = index
 
     @staticmethod
     def get_children(node):
@@ -37,6 +39,46 @@ class Node(object):
         :returns: ``self.children``.
         """
         return node.children
+
+    @staticmethod
+    def lmd(node):
+        """Used to find the left most descendant of a given node
+
+        :returns: ``node.index``
+        """
+        if not node.children:
+            return node.index
+        else:
+            return Node.lmd(node.children[0])
+
+    @staticmethod
+    def lmd_subtree(node, index):
+        """Find the lmd of a  subtree rooted at index value
+
+        :type node: Node
+        :type index: int
+        :returns: ``node.index``
+        """
+        for x in Node.iter(node):
+            if x.index == index:
+                return Node.lmd(x)
+        else:
+            return
+
+    @staticmethod
+    def has_children(node, index):
+        """Returns whether the given node index contains children or not
+
+        :type node: Node
+        :type index: int
+        :return: 1 or 0 or -1"""
+        if node.index == index:
+            return 1 if node.children else 0
+        children = [x.index for x in node.children]
+        if not children:
+            return -1
+        else:
+            return max(Node.has_children(child, index) for child in node.children)
 
     @staticmethod
     def get_label(node):
@@ -64,7 +106,7 @@ class Node(object):
             if label in c: return c.get(label)
 
     def iter(self):
-        """Iterate over this node and its children in a preorder traversal."""
+        """Iterate over this node and its children in a pre-order traversal."""
         queue = collections.deque()
         queue.append(self)
         while len(queue) > 0:
@@ -97,3 +139,13 @@ class Node(object):
         s = "%d:%s" % (len(self.children), self.label)
         s = '\n'.join([s] + [str(c) for c in self.children])
         return s
+
+
+def test():
+    test_node1 = Node("f").addkid(Node("a").addkid(Node("h")).addkid(Node("c").addkid(Node("l")))).addkid(Node("e"))
+    test_node2 = Node("a").addkid(Node('b').addkid(Node('e')).addkid(Node('f'))).addkid(
+        Node('c').addkid(Node('g')).addkid(Node('h').addkid(Node('i')))).addkid(Node('d'))
+
+
+if __name__ == '__main__':
+    test()

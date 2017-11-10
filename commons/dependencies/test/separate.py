@@ -3,7 +3,7 @@ from re import findall, search, split
 from nltk import RegexpParser
 from nltk.stem import WordNetLemmatizer
 
-from main import CoreNLP
+from commons.dependencies.main import CoreNLP
 
 
 def noun_verbs(text):

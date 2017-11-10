@@ -2,7 +2,7 @@ from commons.database import MongoDB, compare_collections
 
 mongodb = MongoDB(db_name='wso2_entities')
 
-wso2_doc_entities_col = mongodb.db.get_collection('Entities_Scores_v4')
+wso2_doc_entities_col = mongodb.db.get_collection('Entities_Scores')
 ordinary_entities_col = mongodb.db.get_collection('Ordinary_entities')
 tech_entities_col = mongodb.db.get_collection('Tech_entities')
 

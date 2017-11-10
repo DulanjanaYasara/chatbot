@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="61297a0e-ef99-4757-832a-44965bc28896" name="Default" comment="Give values to the insert,update and remove functions of the tree.&#10;Approximate algorithm for the fine adjustment of the score of the dependency tree matching.">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/corenlp/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/FoxStoplist.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/FrenchStoplist.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/MIT-License.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/SmartStoplist.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/SpanishStoplist.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/v9094e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/v9094e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/v9570e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/v9570e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/v9650e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/v9650e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w1750e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w1750e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w2167e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w2167e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w3727e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w3727e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w4442e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w4442e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w4979e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w4979e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w5367e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w5367e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w5631e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w5631e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w6206e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w6206e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w6864e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w6864e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7295e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7295e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7415e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7415e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7483e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7483e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7519e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7519e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ab387e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ab387e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ad692e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ad692e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ae050e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ae050e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ae190e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ae190e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ae385e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ae385e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/faobetf_fb29fe.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/faobetf_fb29fe.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/faobetf_fb35be.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/faobetf_fb35be.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/foodfirst_ff08ne.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/foodfirst_ff08ne.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/gtz_g16foe.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/gtz_g16foe.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/gtz_g24ine.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/gtz_g24ine.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/gtz_g32bie.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/gtz_g32bie.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/nri_nr12me.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/nri_nr12me.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0178e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0178e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0512e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0512e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0522e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0522e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0715e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0715e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v3600e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v3600e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v5030e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v5030e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v6718e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v6718e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v8047e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v8047e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v9909e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v9909e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w2227e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w2227e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w3241e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w3241e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w3618e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w3618e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w4233e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w4233e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w4338e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w4338e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w6679e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w6679e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w7407e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w7407e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w7714e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w7714e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w8302e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w8302e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w8594e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w8594e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w9900e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w9900e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/wb_wb01oe.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/wb_wb01oe.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/wb_wb41me.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/wb_wb41me.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/winrock_wi10ce.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/winrock_wi10ce.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0176e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0176e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0185e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0185e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0198e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0198e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0199e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0199e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0451e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0451e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5082e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5082e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5352e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5352e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5644e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5644e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5668e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5668e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5676e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5676e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5681e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5681e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x6759e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x6759e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x6802e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x6802e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/y0500e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/y0500e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/y1128e.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/y1128e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/french/frwikinews-test-1000.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/models/readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/vocabulary/agrovoc_en.rdf.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/evaluate_rake.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/optimize_rake.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/rake.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/rake_french.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/rake_tutorial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/test_data.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/dependencies/test/test.py" afterPath="$PROJECT_DIR$/commons/dependencies/test/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/entity_scoring/wso2_specific_word_generation.py" afterPath="$PROJECT_DIR$/projects/entity_scoring/wso2_specific_word_generation.py" />
+    </list>
+    <ignored path="commons/corenlp/" />
+    <ignored path="commons/stanford_pos_tagger/english-bidirectional-distsim.tagger" />
+    <ignored path="commons/stanford_pos_tagger/stanford-postagger.jar" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/My workings$GettingAccessTokens.coverage" NAME="GettingAccessTokens Coverage Results" MODIFIED="1499675984764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/My workings$original_edit.coverage" NAME="original-edit Coverage Results" MODIFIED="1499744678640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/My workings$beautifulSoupStartUp.coverage" NAME="beautifulSoupStartUp Coverage Results" MODIFIED="1499684436801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="My workings" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="integrate.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commons/dependencies/integrate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_kb.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test_kb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>use</find>
+      <find>dynamic</find>
+      <find>dynam</find>
+      <find>print</find>
+      <find>root</find>
+      <find>Dependencies</find>
+      <find>messa</find>
+      <find>similar</find>
+      <find>Dependencies|acl:relcl</find>
+      <find>corefs</find>
+      <find>P</find>
+      <find>Chosen answer index :</find>
+      <find>irect</find>
+      <find>dict</find>
+      <find>Failover Group</find>
+      <find>equal</find>
+      <find>WOW</find>
+      <find>update</find>
+      <find>new distance</find>
+      <find>pat</find>
+      <find>path</find>
+      <find>children</find>
+      <find>value</find>
+      <find>dpath</find>
+      <find>remove_cost</find>
+      <find>x</find>
+      <find>score</find>
+      <find>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</find>
+      <find>#####</find>
+      <find>########################</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Dulanjana" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/projects/SO_q_a_comparison_entities/getDatafromURL.py" />
+        <option value="$PROJECT_DIR$/projects/SO_q_a_comparison_entities/main-compare-entities.py" />
+        <option value="$PROJECT_DIR$/projects/SO_q_a_comparison_entities/spreadsheet.py" />
+        <option value="$PROJECT_DIR$/commons/wso2_doc/pipelines.py" />
+        <option value="$PROJECT_DIR$/projects/ordinary_tech_lang_entity_extraction/tecg_lang_entities.py" />
+        <option value="$PROJECT_DIR$/projects/ordinary_tech_lang_entity_extraction/update_db.py" />
+        <option value="$PROJECT_DIR$/projects/ordinary_tech_lang_entity_extraction/tech_lang_entities.py" />
+        <option value="$PROJECT_DIR$/projects/ordinary_tech_lang_entity_extraction/ordinary_lang_entities.py" />
+        <option value="$PROJECT_DIR$/projects/entity_scoring/ordinary_tech_entity_extraction.py" />
+        <option value="$PROJECT_DIR$/projects/entity_scoring/entity_scoring_mongodb.py" />
+        <option value="$PROJECT_DIR$/commons/database/__init__.py" />
+        <option value="$PROJECT_DIR$/commons/database/mongodb.py" />
+        <option value="$PROJECT_DIR$/projects/tests/tree_implementation.py" />
+        <option value="$PROJECT_DIR$/projects/tests/test.py" />
+        <option value="$PROJECT_DIR$/projects/tests/new.py" />
+        <option value="$PROJECT_DIR$/projects/tests/lol.py" />
+        <option value="$PROJECT_DIR$/projects/tests/original-edit.py" />
+        <option value="$PROJECT_DIR$/projects/tests/tree_implementing.py" />
+        <option value="$PROJECT_DIR$/projects/tests/stack_overflow_tree_implement.py" />
+        <option value="$PROJECT_DIR$/projects/tests/my_tree_build.py" />
+        <option value="$PROJECT_DIR$/commons/data/__init__.py" />
+        <option value="$PROJECT_DIR$/commons/data/acronym_file.csv" />
+        <option value="$PROJECT_DIR$/commons/data/tree.py" />
+        <option value="$PROJECT_DIR$/projects/semantic_kb_analyzing/main.py" />
+        <option value="$PROJECT_DIR$/projects/entity_scoring/based_on_trees.py" />
+        <option value="$PROJECT_DIR$/commons/parser/turbo.py" />
+        <option value="$PROJECT_DIR$/commons/stanford_dependency_parser/api.py" />
+        <option value="$PROJECT_DIR$/commons/stanford_core_nlp/api.py" />
+        <option value="$PROJECT_DIR$/commons/stanford_core_nlp/server.py" />
+        <option value="$PROJECT_DIR$/commons/stanford_core_nlp/main.py" />
+        <option value="$PROJECT_DIR$/commons/corenlp/main.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/separate.py" />
+        <option value="$PROJECT_DIR$/projects/tests/dependency_test.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/tree.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/main.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/zss/__init__.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/test.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/test/test.py" />
+        <option value="$PROJECT_DIR$/commons/spreadsheet/basic.py" />
+        <option value="$PROJECT_DIR$/wso2_doc/pipelines.py" />
+        <option value="$PROJECT_DIR$/wso2_doc/spiders/documentation.py" />
+        <option value="$PROJECT_DIR$/commons/data/entity.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/test/test_kb.py" />
+        <option value="$PROJECT_DIR$/projects/entity_scoring/wso2_specific_word_generation.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/zss/compare1.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/zss/simple_tree.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/zss/compare.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/dependencies.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/integrate.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/map.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/test/separate.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="-4" />
+    <option name="width" value="960" />
+    <option name="height" value="1035" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="My workings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="My workings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="My workings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="My workings" type="462c0819:PsiDirectoryNode" />
+              <item name="commons" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="My workings" type="cbb8eebc:String" user="My workings" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/dependencies_Py3.5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SO_q_a_modification/tests" />
+      <recent name="$PROJECT_DIR$/SO_compare_entities" />
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/spreadsheet" />
+      <recent name="$PROJECT_DIR$/Stackoverflow_q_a_modification/tests" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/commons/dependencies/test" />
+      <recent name="$PROJECT_DIR$/commons/dependencies" />
+      <recent name="$PROJECT_DIR$/commons/corenlp" />
+      <recent name="$PROJECT_DIR$/projects/tests" />
+      <recent name="$PROJECT_DIR$/projects/tests/nlp" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.integrate">
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+    </configuration>
+    <configuration default="true" type="Python.Ipnb" factoryName="Jupyter Notebook">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <option name="additionalOptions" value="" />
+      <option name="ipnbHost" value="127.0.0.1" />
+      <option name="ipnbPort" value="8888" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="My workings" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration name="compare" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/commons/dependencies/zss" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/dependencies/zss/compare.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="dependencies" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/commons/dependencies" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/dependencies/dependencies.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="integrate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/commons/dependencies" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/dependencies/integrate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/dependencies/test/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="test_kb" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/dependencies/test/test_kb.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.integrate" />
+      <item index="1" class="java.lang.String" itemvalue="Python.compare" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test_kb" />
+      <item index="4" class="java.lang.String" itemvalue="Python.dependencies" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.integrate" />
+        <item index="1" class="java.lang.String" itemvalue="Python.dependencies" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test_kb" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.compare" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61297a0e-ef99-4757-832a-44965bc28896" name="Default" comment="" />
+      <created>1499426339872</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1499426339872</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1502173662907</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1502173662907</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First Commit">
+      <created>1503903806568</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1503903806568</updated>
+    </task>
+    <task id="LOCAL-00003" summary="08/09/2017">
+      <created>1504866378463</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1504866378463</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Before Code review.&#10;Full clean and neat code">
+      <created>1507613668945</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1507613668945</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Creation of tree for the words&#10;Start-up codes for the evaluation of semantic kb question and answer">
+      <created>1508240106145</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1508240106145</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Creation of the trees for the entity generation of the most specific WSO2 words.&#10;Using corenlp server for the process of the dependency matching of the question and answers.">
+      <created>1508900704593</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1508900704593</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Give values to the insert,update and remove functions of the tree.&#10;Approximate algorithm for the fine adjustment of the score of the dependency tree matching.">
+      <created>1509008771767</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1509008771767</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Performing the subtree edit operations successfully.&#10;Approximately obtaining a suitable function for the costs and scores. &#10;Clean and neat code prepared.&#10;&#10;Add unversioned project files">
+      <created>1510287726974</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1510287726974</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_in_internetRake - 2017.08.01 at 11h 28m 06s.xml">
+      <configuration name="Unittests in internetRake" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_internetRake - 2017.08.01 at 11h 28m 14s.xml">
+      <configuration name="Unittests in internetRake" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_internetRake - 2017.08.01 at 11h 28m 15s.xml">
+      <configuration name="Unittests in internetRake" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_internetRake - 2017.08.01 at 11h 28m 16s.xml">
+      <configuration name="Unittests in internetRake" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_internetRake - 2017.08.01 at 11h 29m 59s.xml">
+      <configuration name="Unittests in internetRake" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_internetRake_py - 2017.08.01 at 11h 30m 26s.xml">
+      <configuration name="Unittests in internetRake.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_internetRake_py - 2017.08.01 at 11h 31m 34s.xml">
+      <configuration name="Unittests in internetRake.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_internetRake_py - 2017.08.01 at 11h 32m 35s.xml">
+      <configuration name="Unittests in internetRake.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_testNew_py - 2017.07.24 at 09h 45m 42s.xml">
+      <configuration name="Unittests in testNew.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_testNew_py - 2017.07.24 at 09h 46m 56s.xml">
+      <configuration name="Unittests in testNew.py" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-4" width="1920" height="1035" extended-state="6" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32673267" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16225165" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69757175" sideWeight="0.511206" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45785877" sideWeight="0.49583334" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.72516555" sideWeight="0.48879403" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5596027" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18783352" sideWeight="0.4941691" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16008538" sideWeight="0.5058309" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4370861" sideWeight="0.49252936" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924226" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="682" y="415" width="555" height="297" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32339954" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sh" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="First Commit" />
+    <MESSAGE value="08/09/2017" />
+    <MESSAGE value="Before Code review.&#10;Full clean and neat code" />
+    <MESSAGE value="Creation of tree for the words&#10;Start-up codes for the evaluation of semantic kb question and answer" />
+    <MESSAGE value="Creation of the trees for the entity generation of the most specific WSO2 words.&#10;Using corenlp server for the process of the dependency matching of the question and answers." />
+    <MESSAGE value="Give values to the insert,update and remove functions of the tree.&#10;Approximate algorithm for the fine adjustment of the score of the dependency tree matching." />
+    <MESSAGE value="Performing the subtree edit operations successfully.&#10;Approximately obtaining a suitable function for the costs and scores. &#10;Clean and neat code prepared.&#10;&#10;Add unversioned project files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Performing the subtree edit operations successfully.&#10;Approximately obtaining a suitable function for the costs and scores. &#10;Clean and neat code prepared.&#10;&#10;Add unversioned project files" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/services/wso2spider/spiders/docs_wso2.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="58" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/commons/parser/turbo.py" />
+    <entry file="file://$PROJECT_DIR$/english-onesent.txt.out" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/nltk/stem/wordnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/tests/nlp/Test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="100" column="4" lean-forward="false" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="142" column="4" lean-forward="false" selection-start-line="142" selection-start-column="4" selection-end-line="142" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/data/doc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="28" column="46" lean-forward="false" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/suzy/ans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="16" column="106" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/data/stackoverflow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/tests/dependency_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/based_on_trees.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/data/tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-821">
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/SO_q_a_modification/extractData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/zss/simple_tree.py" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/zss/compare.py" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/zss/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/test/Q A match-637580fa4bf2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="237" column="8" lean-forward="false" selection-start-line="237" selection-start-column="8" selection-end-line="237" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-1247972723/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="2707" column="8" lean-forward="false" selection-start-line="2707" selection-start-column="8" selection-end-line="2707" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/gspread/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="463" column="8" lean-forward="false" selection-start-line="463" selection-start-column="8" selection-end-line="463" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/SO_compare_entities/import&amp;compare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pycorenlp/corenlp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/spreadsheet/basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/spreadsheet_generating.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/ordinary_tech_entity_extraction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="65" column="13" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/semantic_kb_analyzing/main.py" />
+    <entry file="file://$PROJECT_DIR$/wso2_doc/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="100" column="40" lean-forward="true" selection-start-line="100" selection-start-column="40" selection-end-line="100" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wso2_doc/spiders/documentation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="77" column="65" lean-forward="true" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wso2_doc/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/stanford_pos_tagger/stanfordapi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/suzy/ask.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/nltk/corpus/reader/framenet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="1903" column="8" lean-forward="false" selection-start-line="1903" selection-start-column="8" selection-end-line="1903" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/wso2_specific_word_generation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/entity_scoring_mongodb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/manually_prioritized_entities.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="22" column="77" lean-forward="false" selection-start-line="22" selection-start-column="77" selection-end-line="22" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-1247972723/numpy/core/multiarray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="2359" column="12" lean-forward="false" selection-start-line="2359" selection-start-column="12" selection-end-line="2359" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/data/entity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4109">
+          <caret line="250" column="0" lean-forward="false" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28098">
+          <caret line="1598" column="0" lean-forward="false" selection-start-line="1598" selection-start-column="0" selection-end-line="1598" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/unidecode/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/zss/compare1.py" />
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/zss/compare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="435" column="55" lean-forward="false" selection-start-line="435" selection-start-column="55" selection-end-line="435" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/zss/simple_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1057">
+          <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/zss/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/dependencies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3312">
+          <caret line="184" column="0" lean-forward="true" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/integrate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3366">
+          <caret line="187" column="26" lean-forward="true" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/test/separate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test_kb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

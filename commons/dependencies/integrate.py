@@ -1,3 +1,5 @@
+from time import time
+
 from unidecode import unidecode
 
 from dependencies import generate
@@ -13,12 +15,22 @@ def best_ans(core_nlp, question, answer_list):
     :type core_nlp: CoreNLP
     """
     scores = {}
+    start_time = time()
     q_dependencies = list(generate(core_nlp.parse(question)))
+    elapsed_time = time() - start_time
+    print 'Time taken to create q dependencies :', elapsed_time
     for index, value in enumerate(answer_list):
+        start_time = time()
         a_dependencies = list(generate(core_nlp.parse(unidecode(value))))
+        elapsed_time = time() - start_time
+        print 'Time taken to create a dependencies :', elapsed_time
         scores[index + 1] = find_score(q_dependencies, a_dependencies)
 
     print 'Scores :', str(scores)
+
+    # max_scores = max(scores.values())
+    # return [k for k, v in scores.iteritems() if v == max_scores]
+
     min_scores = min(scores.values())
     return [k for k, v in scores.iteritems() if v == min_scores]
 
@@ -76,8 +88,9 @@ def test():
     in the WSO2 Administration Guide. Add the database drivers to the <EI_HOME>/lib/directory when setting up the
     database.''',
               '''To change the default database configurations for WSO2 DAS, see Working with Databases.''']
-
-    print best_ans(dependency_parse, q_text, a_text)
+    q = '''Can I use BPMN instead of BPEL via the Business Process profile? '''
+    a = ['''The Business Process Profile supports both BPMN and BPEL.''']
+    print best_ans(dependency_parse, q, a)
 
 
 if __name__ == '__main__':

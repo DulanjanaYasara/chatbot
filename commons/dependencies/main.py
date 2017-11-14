@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 from pycorenlp import StanfordCoreNLP
+from pymongo import MongoClient
 
 
 class CoreNLP:
+    mongo = MongoClient()
+    mongo_db = mongo.get_database('dependencies')
     """Used to initialize the Stanford Core NLP in servlet mode and then connect to it using a socket"""
 
     def __init__(self, timeout=15000, port=9000, buffer_size=4096):
@@ -18,12 +21,18 @@ class CoreNLP:
         self.nlp = StanfordCoreNLP('http://localhost:' + self.port)
 
     def parse(self, text):
-        output = self.nlp.annotate(text, properties={
-            'annotators': 'tokenize,ssplit,pos,depparse,parse,coref',
-            'coref.algorithm': 'neural',
-            'outputFormat': 'json'
-        })
-        return output
+        dobj = self.mongo_db.get_collection('dependency').find_one({'text': text})
+        if not dobj:
+            output = self.nlp.annotate(text, properties={
+                'annotators': 'tokenize,ssplit,pos,depparse,parse,coref',
+                'coref.algorithm': 'neural',
+                'outputFormat': 'json'
+            })
+            dep = {'text': text, 'deps': output}
+            self.mongo_db.get_collection('dependency').insert_one(dep)
+            return output
+        else:
+            return dobj['deps']
 
         # def __del__(self):
         #     """ Terminating the process """

@@ -67,9 +67,9 @@ def generate(dependency_parsed_text):
     for sentence in dependency_parsed_text['sentences']:
         # A dict to keep the word index of nouns, verbs, pronouns and WH verbs
         indices = {element['index']: element['pos'][0] for element in sentence['tokens'] if
-                   search(r'NN.*|VB.*|PRP.*|W.+', element['pos'])}
+                   search(r'NN.*|VB.*|PRP.*|W.+', element['pos']) or element['word'].lower() == 'not'}
         # Adding important element of ROOT
-        indices[0] = 'R'
+        indices[0] = 'A'
 
         # Checking for the availability of the 'ROOT' in the indices list. If not, adding them to 'indices' list,
         # without considering the pos tag form
@@ -177,6 +177,7 @@ def test():
     and the fault is sent back to the requesting client. send [line 44 in ESB config] - the send mediator is used to 
     send the message to the intended receiver - however if the makeFault inside the on-fail element (line 37 in ESB 
     config) is executed before this mediator is reached, then the fault is returned to the requesting client. '''
+    text3 = '''Is there commercial support available for WSO2 Enterprise Integrator?'''
     print list(generate(dependency_parse.parse(text3)))
 
 

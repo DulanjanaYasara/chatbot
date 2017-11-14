@@ -2,158 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61297a0e-ef99-4757-832a-44965bc28896" name="Default" comment="Give values to the insert,update and remove functions of the tree.&#10;Approximate algorithm for the fine adjustment of the score of the dependency tree matching.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/corenlp/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/FoxStoplist.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/FrenchStoplist.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/MIT-License.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/SmartStoplist.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/SpanishStoplist.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/v9094e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/v9094e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/v9570e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/v9570e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/v9650e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/v9650e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w1750e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w1750e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w2167e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w2167e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w3727e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w3727e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w4442e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w4442e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w4979e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w4979e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w5367e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w5367e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w5631e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w5631e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w6206e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w6206e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w6864e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w6864e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7295e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7295e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7415e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7415e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7483e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7483e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7519e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_test/w7519e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ab387e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ab387e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ad692e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ad692e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ae050e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ae050e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ae190e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ae190e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ae385e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/ae385e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/faobetf_fb29fe.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/faobetf_fb29fe.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/faobetf_fb35be.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/faobetf_fb35be.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/foodfirst_ff08ne.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/foodfirst_ff08ne.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/gtz_g16foe.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/gtz_g16foe.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/gtz_g24ine.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/gtz_g24ine.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/gtz_g32bie.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/gtz_g32bie.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/nri_nr12me.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/nri_nr12me.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0178e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0178e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0512e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0512e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0522e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0522e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0715e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/t0715e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v3600e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v3600e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v5030e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v5030e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v6718e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v6718e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v8047e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v8047e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v9909e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/v9909e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w2227e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w2227e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w3241e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w3241e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w3618e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w3618e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w4233e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w4233e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w4338e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w4338e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w6679e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w6679e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w7407e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w7407e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w7714e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w7714e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w8302e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w8302e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w8594e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w8594e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w9900e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/w9900e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/wb_wb01oe.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/wb_wb01oe.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/wb_wb41me.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/wb_wb41me.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/winrock_wi10ce.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/winrock_wi10ce.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0176e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0176e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0185e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0185e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0198e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0198e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0199e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0199e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0451e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x0451e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5082e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5082e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5352e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5352e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5644e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5644e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5668e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5668e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5676e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5676e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5681e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x5681e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x6759e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x6759e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x6802e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/x6802e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/y0500e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/y0500e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/y1128e.key" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/fao_train/y1128e.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/docs/french/frwikinews-test-1000.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/models/readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/data/vocabulary/agrovoc_en.rdf.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/evaluate_rake.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/optimize_rake.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/rake.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/rake_french.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/rake_tutorial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commons/rake/test_data.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/dependencies/test/test.py" afterPath="$PROJECT_DIR$/commons/dependencies/test/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/entity_scoring/wso2_specific_word_generation.py" afterPath="$PROJECT_DIR$/projects/entity_scoring/wso2_specific_word_generation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commons/dependencies/test/test_kb_spreadsheet.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/dulanjana.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/dulanjana.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/dependencies/dependencies.py" afterPath="$PROJECT_DIR$/commons/dependencies/dependencies.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/dependencies/integrate.py" afterPath="$PROJECT_DIR$/commons/dependencies/integrate.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/dependencies/main.py" afterPath="$PROJECT_DIR$/commons/dependencies/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/dependencies/map.py" afterPath="$PROJECT_DIR$/commons/dependencies/map.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/dependencies/zss/compare.py" afterPath="$PROJECT_DIR$/commons/dependencies/zss/compare.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/entity_scoring/based_on_trees.py" afterPath="$PROJECT_DIR$/projects/entity_scoring/based_on_trees.py" />
     </list>
     <ignored path="commons/corenlp/" />
     <ignored path="commons/stanford_pos_tagger/english-bidirectional-distsim.tagger" />
@@ -181,19 +38,43 @@
       <file leaf-file-name="integrate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commons/dependencies/integrate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="-679">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dependencies.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commons/dependencies/dependencies.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1924">
+              <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+              <folding>
+                <element signature="e#45#73#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+            <state relative-caret-position="-466">
+              <caret line="13" column="74" lean-forward="true" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_kb_spreadsheet.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test_kb_spreadsheet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1330">
+              <caret line="36" column="11" lean-forward="false" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -201,9 +82,21 @@
       <file leaf-file-name="test_kb.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test_kb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="-540">
               <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/commons/dependencies/map.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="150" column="0" lean-forward="true" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -219,15 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>use</find>
-      <find>dynamic</find>
-      <find>dynam</find>
-      <find>print</find>
-      <find>root</find>
-      <find>Dependencies</find>
-      <find>messa</find>
-      <find>similar</find>
-      <find>Dependencies|acl:relcl</find>
       <find>corefs</find>
       <find>P</find>
       <find>Chosen answer index :</find>
@@ -249,7 +133,19 @@
       <find>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</find>
       <find>#####</find>
       <find>########################</find>
+      <find>'+'</find>
+      <find>Subtree edit operation</find>
+      <find>costs</find>
+      <find>Percentage</find>
+      <find>'J'</find>
+      <find>rb</find>
+      <find>'r'</find>
+      <find>'R'</find>
+      <find>'not'</find>
     </findStrings>
+    <replaceStrings>
+      <replace>'A'</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -262,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/projects/SO_q_a_comparison_entities/getDatafromURL.py" />
         <option value="$PROJECT_DIR$/projects/SO_q_a_comparison_entities/main-compare-entities.py" />
         <option value="$PROJECT_DIR$/projects/SO_q_a_comparison_entities/spreadsheet.py" />
         <option value="$PROJECT_DIR$/commons/wso2_doc/pipelines.py" />
@@ -286,7 +181,6 @@
         <option value="$PROJECT_DIR$/commons/data/acronym_file.csv" />
         <option value="$PROJECT_DIR$/commons/data/tree.py" />
         <option value="$PROJECT_DIR$/projects/semantic_kb_analyzing/main.py" />
-        <option value="$PROJECT_DIR$/projects/entity_scoring/based_on_trees.py" />
         <option value="$PROJECT_DIR$/commons/parser/turbo.py" />
         <option value="$PROJECT_DIR$/commons/stanford_dependency_parser/api.py" />
         <option value="$PROJECT_DIR$/commons/stanford_core_nlp/api.py" />
@@ -296,23 +190,25 @@
         <option value="$PROJECT_DIR$/commons/dependencies/separate.py" />
         <option value="$PROJECT_DIR$/projects/tests/dependency_test.py" />
         <option value="$PROJECT_DIR$/commons/dependencies/tree.py" />
-        <option value="$PROJECT_DIR$/commons/dependencies/main.py" />
         <option value="$PROJECT_DIR$/commons/dependencies/zss/__init__.py" />
         <option value="$PROJECT_DIR$/commons/dependencies/test.py" />
-        <option value="$PROJECT_DIR$/commons/dependencies/test/test.py" />
         <option value="$PROJECT_DIR$/commons/spreadsheet/basic.py" />
         <option value="$PROJECT_DIR$/wso2_doc/pipelines.py" />
         <option value="$PROJECT_DIR$/wso2_doc/spiders/documentation.py" />
         <option value="$PROJECT_DIR$/commons/data/entity.py" />
-        <option value="$PROJECT_DIR$/commons/dependencies/test/test_kb.py" />
         <option value="$PROJECT_DIR$/projects/entity_scoring/wso2_specific_word_generation.py" />
         <option value="$PROJECT_DIR$/commons/dependencies/zss/compare1.py" />
         <option value="$PROJECT_DIR$/commons/dependencies/zss/simple_tree.py" />
-        <option value="$PROJECT_DIR$/commons/dependencies/zss/compare.py" />
-        <option value="$PROJECT_DIR$/commons/dependencies/dependencies.py" />
-        <option value="$PROJECT_DIR$/commons/dependencies/integrate.py" />
-        <option value="$PROJECT_DIR$/commons/dependencies/map.py" />
         <option value="$PROJECT_DIR$/commons/dependencies/test/separate.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/test/test_kb.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/test/test.py" />
+        <option value="$PROJECT_DIR$/projects/entity_scoring/based_on_trees.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/main.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/zss/compare.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/integrate.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/test/test_kb_spreadsheet.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/dependencies.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/map.py" />
       </list>
     </option>
   </component>
@@ -323,6 +219,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1" />
     <option name="y" value="-4" />
     <option name="width" value="960" />
     <option name="height" value="1035" />
@@ -343,7 +240,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -355,6 +251,19 @@
               <item name="My workings" type="b2602c69:ProjectViewProjectNode" />
               <item name="My workings" type="462c0819:PsiDirectoryNode" />
               <item name="commons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="My workings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="My workings" type="462c0819:PsiDirectoryNode" />
+              <item name="commons" type="462c0819:PsiDirectoryNode" />
+              <item name="dependencies" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="My workings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="My workings" type="462c0819:PsiDirectoryNode" />
+              <item name="commons" type="462c0819:PsiDirectoryNode" />
+              <item name="dependencies" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -371,6 +280,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -407,7 +317,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.integrate">
+  <component name="RunManager" selected="Python.test_kb_spreadsheet">
     <configuration default="true" type="tests" factoryName="Doctests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -579,24 +489,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="integrate" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/commons/dependencies" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="My workings" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/dependencies/integrate.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -633,19 +525,37 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="test_kb_spreadsheet" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/dependencies/test/test_kb_spreadsheet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.integrate" />
+      <item index="0" class="java.lang.String" itemvalue="Python.test" />
       <item index="1" class="java.lang.String" itemvalue="Python.compare" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test_kb" />
-      <item index="4" class="java.lang.String" itemvalue="Python.dependencies" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test_kb" />
+      <item index="3" class="java.lang.String" itemvalue="Python.dependencies" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test_kb_spreadsheet" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.integrate" />
-        <item index="1" class="java.lang.String" itemvalue="Python.dependencies" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test_kb" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test_kb_spreadsheet" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.dependencies" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test_kb" />
         <item index="4" class="java.lang.String" itemvalue="Python.compare" />
       </list>
     </recent_temporary>
@@ -766,6 +676,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1035" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32673267" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16225165" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -773,12 +684,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69757175" sideWeight="0.511206" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45785877" sideWeight="0.49583334" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.72516555" sideWeight="0.48879403" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5596027" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18783352" sideWeight="0.4941691" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49337748" sideWeight="0.48879403" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5419426" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.178762" sideWeight="0.4941691" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16008538" sideWeight="0.5058309" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4370861" sideWeight="0.49252936" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54635763" sideWeight="0.49252936" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924226" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -839,50 +750,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/commons/parser/turbo.py" />
-    <entry file="file://$PROJECT_DIR$/english-onesent.txt.out" />
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/nltk/stem/wordnet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/tests/nlp/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/requests/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="100" column="4" lean-forward="false" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python2.7/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="142" column="4" lean-forward="false" selection-start-line="142" selection-start-column="4" selection-end-line="142" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commons/data/doc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="28" column="46" lean-forward="false" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commons/suzy/ans.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="16" column="106" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commons/data/stackoverflow.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -894,20 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/based_on_trees.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commons/data/tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-821">
-          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -935,20 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-1247972723/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="2707" column="8" lean-forward="false" selection-start-line="2707" selection-start-column="8" selection-end-line="2707" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/gspread/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="463" column="8" lean-forward="false" selection-start-line="463" selection-start-column="8" selection-end-line="463" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projects/SO_compare_entities/import&amp;compare.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -963,39 +802,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commons/spreadsheet/basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/spreadsheet_generating.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/ordinary_tech_entity_extraction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="65" column="13" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projects/semantic_kb_analyzing/main.py" />
     <entry file="file://$PROJECT_DIR$/wso2_doc/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="100" column="40" lean-forward="true" selection-start-line="100" selection-start-column="40" selection-end-line="100" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wso2_doc/spiders/documentation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="77" column="65" lean-forward="true" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -1024,20 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="1903" column="8" lean-forward="false" selection-start-line="1903" selection-start-column="8" selection-end-line="1903" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/wso2_specific_word_generation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/entity_scoring_mongodb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1081,23 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commons/dependencies/zss/compare.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="435" column="55" lean-forward="false" selection-start-line="435" selection-start-column="55" selection-end-line="435" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commons/dependencies/zss/simple_tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1057">
-          <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1105,31 +885,104 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commons/dependencies/dependencies.py">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/gspread/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3312">
-          <caret line="184" column="0" lean-forward="true" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="421">
+          <caret line="409" column="42" lean-forward="true" selection-start-line="409" selection-start-column="42" selection-end-line="409" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commons/dependencies/integrate.py">
+    <entry file="file://$PROJECT_DIR$/commons/spreadsheet/basic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="322">
+          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commons/dependencies/map.py">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/fuzzywuzzy/StringMatcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3366">
-          <caret line="187" column="26" lean-forward="true" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/fuzzywuzzy/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/fuzzywuzzy/fuzz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="112" column="8" lean-forward="true" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/fuzzywuzzy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/fuzzywuzzy/string_processing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/fuzzywuzzy/process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4765">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/entity_scoring_mongodb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/ordinary_tech_entity_extraction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-284">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/spreadsheet_generating.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/wso2_specific_word_generation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/data/tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/entity_scoring/based_on_trees.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1137,31 +990,107 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wso2_doc/spiders/documentation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-236">
+          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/database/mongodb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-1247972723/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="2577" column="8" lean-forward="false" selection-start-line="2577" selection-start-column="8" selection-end-line="2577" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/zss/compare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5143">
+          <caret line="150" column="4" lean-forward="false" selection-start-line="150" selection-start-column="4" selection-end-line="150" selection-end-column="4" />
+          <folding>
+            <element signature="e#194#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/zss/simple_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1471">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commons/dependencies/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="293">
+          <caret line="25" column="57" lean-forward="true" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test_kb.py">
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/integrate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+        <state relative-caret-position="-679">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/dependencies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1924">
+          <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+          <folding>
+            <element signature="e#45#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        <state relative-caret-position="-466">
+          <caret line="13" column="74" lean-forward="true" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test_kb_spreadsheet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1330">
+          <caret line="36" column="11" lean-forward="false" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test_kb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="150" column="0" lean-forward="true" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

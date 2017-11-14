@@ -296,7 +296,7 @@ def distance(A, B, get_children, insert_cost, remove_cost, update_cost):
     s2_indexed_optimal = generate([y.index for y in Bt.nodes], False)
 
     subtree_op = subtree_edit_operations(s1_indexed_optimal, s2_indexed_optimal, A, B)
-    print 'Subtree edit operations :', subtree_op
+    print 'Subtree edit operations :', ''.join(subtree_op)
 
     enhanced_dist = enhanced_distance(edit_sequence, dvalue[-1][-1])
 

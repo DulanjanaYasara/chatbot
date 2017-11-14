@@ -1,6 +1,7 @@
 import math
 import re
 
+import numpy
 from nltk.corpus import framenet as fn
 
 from zss import Node
@@ -9,7 +10,7 @@ from zss import distance
 dictionary = {}
 
 
-def tree_generate(node_name, index, pos, dependency_list, visited_list):
+def tree_generate(node_name, index, pos, dependency_list, visited_list, reverse=False):
     """Generating a tree from the node name given
 
     :type index: int
@@ -33,7 +34,7 @@ def tree_generate(node_name, index, pos, dependency_list, visited_list):
         if Node.get_children(node):
             node.value += sum([g.value for g in Node.get_children(node)])
             # print node.label, node.value, node.pos
-    node.children.sort(key=lambda x: x.label)
+    node.children.sort(key=lambda x: x.label, reverse=reverse)
     return node
 
 
@@ -50,14 +51,14 @@ def assign_value(node, factor):
         assign_value(x, factor)
 
 
-def tree(dependency_list):
+def tree(dependency_list, reverse=False):
     """Generating a tree from the dependency list
 
     :type dependency_list: list
     """
     for value in dependency_list:
         if 'root' == value[0][1]:
-            generated_tree = tree_generate('root', 0, 'R', dependency_list, [])
+            generated_tree = tree_generate('root', 0, 'A', dependency_list, [], reverse=reverse)
             assign_value(generated_tree, 1)
             return generated_tree
         else:
@@ -74,45 +75,37 @@ def find_score(q_dependency_list, a_dependency_list):
     costs = []
     for q_dep in q_dependency_list:
         print q_dep
-        print'___________________________________________________________________________________________________'
-        q_tree = tree(q_dep)
-        # q_entities = set(find_entities(q_dep))
-        # common_entities = []
+        print'_____________________________________________________________________________________________________________'
+        q_entities = set(find_entities(q_dep))
+        common_entities = []
+
         for a_dep in a_dependency_list:
-            a_tree = tree(a_dep)
             a_entities = list(find_entities(a_dep))
             print a_dep
             # Finding the edit distance
             # edit_distance = simple_distance(a_tree, q_tree)
-            enhanced_distance = distance(Node.get_children(a_tree)[0], Node.get_children(q_tree)[0],
-                                         get_children, insert_cost, remove_cost, update_cost)
-            print 'Enhanced distance :', enhanced_distance
-            costs.append(enhanced_distance)
-            # new_distance = edit_distance / float(len(a_entities))
-            # print 'New distance :',
-            # print new_distance
-            # # Finding common entities
-            # common = q_entities.intersection(set(a_entities))
-            # print common
-            # new_entities = [x for x in common if x not in common_entities]
-            # print 'new entities', len(new_entities)
-            # common_entities += new_entities
-            # if new_distance:
-            #     score += (len(new_entities) / float(new_distance))
-            #     print 'score :', score
-            # else:
-            #     return float('inf')
-            # score.append(edit_distance)
+            enhanced_distance = distance(tree(a_dep).children[0], tree(q_dep).children[0], get_children, insert_cost,
+                                         remove_cost, update_cost)
+            print '\033[94m', 'Enhanced distance :', enhanced_distance, '\033[0m'
+            new_distance = enhanced_distance / float(len(a_entities))
+            print 'New distance :', new_distance
+            # Finding common entities
+            common = q_entities.intersection(set(a_entities))
+            new_entities = [x for x in common if x not in common_entities]
+            print 'new entities :', len(new_entities)
+            common_entities += new_entities
+            if new_entities:
+                costs.append(float(new_distance) / len(new_entities))
+            else:
+                costs.append(new_distance)
 
+    var = numpy.var(numpy.array(costs))
     min_cost = min(costs)
-    avg_cost = sum(costs) / float(len(costs))
-    print 'min :', min_cost, 'avg :', avg_cost
+    print 'min :', min_cost, 'var :', var
+    k = 0.8
+    final_cost = math.hypot(min_cost, k * var)
 
-    k = 0.75
-    cost_range = avg_cost - min_cost
-    final_cost = math.sqrt((k * min_cost) ** 2 + ((1 - k) * cost_range) ** 2)
-
-    print 'final cost      :', final_cost
+    print '\033[92m', 'final cost      :', final_cost, '\033[0m'
     return final_cost
 
 
@@ -138,11 +131,11 @@ def get_children(node):
 
 
 def insert_cost(node):
-    return 4 * node.value
+    return 2 * node.value
 
 
 def remove_cost(node):
-    return 1 * node.value
+    return 0.5 * node.value
 
 
 def update_cost(a, b):
@@ -151,38 +144,39 @@ def update_cost(a, b):
         return 0
     elif a.pos == 'V' and b.pos == 'V' and check((re.escape(a.label), 'v'), (re.escape(b.label), 'v')):
         # If a and b have common frames
-        return 0.2
+        return 0
     else:
-        return float(a.value + 4 * b.value)
+        # return (remove_cost(a) + insert_cost(b)) / 2
+        return math.hypot(remove_cost(a), insert_cost(b))
 
 
 def test():
-    q = [[[(0, u'root', 'R'), (7, u'a', u'V')],
-          [(7, u'a', 'R'), (2, u'c', u'V')],
-          [(7, u'a', 'R'), (6, u'd', u'V')],
-          [(2, u'c', 'R'), (1, u'g', u'V')],
-          [(6, u'd', 'R'), (5, u'x', u'V')],
-          [(5, u'x', 'R'), (3, u'y', u'V')],
-          [(5, u'x', 'R'), (4, u'z', u'V')]]]
-    a = [[[(0, u'root', 'R'), (7, u'a', u'V')],
-          [(7, u'a', 'R'), (3, u'b', u'V')],
-          [(7, u'a', 'R'), (5, u'c', u'V')],
-          [(7, u'a', 'R'), (6, u'd', u'V')],
-          [(3, u'b', 'R'), (1, u'e', u'V')],
-          [(3, u'b', 'R'), (2, u'f', u'V')],
-          [(5, u'c', 'R'), (4, u'g', u'V')]]]
-    a1 = [[(0, u'root', 'R'), (1, u'a', u'V')],
-          [(1, u'a', 'R'), (3, u'c', u'V')],
-          [(1, u'a', 'R'), (2, u'b', u'V')],
-          [(2, u'b', 'R'), (4, u'f', u'V')],
-          [(4, u'f', 'R'), (7, u'g', u'V')],
-          [(4, u'f', 'R'), (8, u'h', u'V')],
-          [(3, u'c', 'R'), (5, u'd', u'V')],
-          [(3, u'c', 'R'), (6, u'e', u'V')]]
-    dependencies = [[[(0, u'root', 'R'), (1, u'a', u'V')],
-                     [(1, u'a', 'R'), (2, u'b', u'V')],
-                     [(1, u'a', 'R'), (3, u'c', u'V')]]]
-    x = tree_generate('root', 0, 'R', dependencies, [])
+    q = [[[(0, u'root', 'A'), (7, u'a', u'V')],
+          [(7, u'a', 'A'), (2, u'c', u'V')],
+          [(7, u'a', 'A'), (6, u'd', u'V')],
+          [(2, u'c', 'A'), (1, u'g', u'V')],
+          [(6, u'd', 'A'), (5, u'x', u'V')],
+          [(5, u'x', 'A'), (3, u'y', u'V')],
+          [(5, u'x', 'A'), (4, u'z', u'V')]]]
+    a = [[[(0, u'root', 'A'), (7, u'a', u'V')],
+          [(7, u'a', 'A'), (3, u'b', u'V')],
+          [(7, u'a', 'A'), (5, u'c', u'V')],
+          [(7, u'a', 'A'), (6, u'd', u'V')],
+          [(3, u'b', 'A'), (1, u'e', u'V')],
+          [(3, u'b', 'A'), (2, u'f', u'V')],
+          [(5, u'c', 'A'), (4, u'g', u'V')]]]
+    a1 = [[(0, u'root', 'A'), (1, u'a', u'V')],
+          [(1, u'a', 'A'), (3, u'c', u'V')],
+          [(1, u'a', 'A'), (2, u'b', u'V')],
+          [(2, u'b', 'A'), (4, u'f', u'V')],
+          [(4, u'f', 'A'), (7, u'g', u'V')],
+          [(4, u'f', 'A'), (8, u'h', u'V')],
+          [(3, u'c', 'A'), (5, u'd', u'V')],
+          [(3, u'c', 'A'), (6, u'e', u'V')]]
+    dependencies = [[[(0, u'root', 'A'), (1, u'a', u'V')],
+                     [(1, u'a', 'A'), (2, u'b', u'V')],
+                     [(1, u'a', 'A'), (3, u'c', u'V')]]]
+    x = tree_generate('root', 0, 'A', dependencies, [])
     print find_score(q, a)
 
 

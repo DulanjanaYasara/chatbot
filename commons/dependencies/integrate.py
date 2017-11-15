@@ -28,9 +28,6 @@ def best_ans(core_nlp, question, answer_list):
 
     print 'Scores :', str(scores)
 
-    # max_scores = max(scores.values())
-    # return [k for k, v in scores.iteritems() if v == max_scores]
-
     min_scores = min(scores.values())
     return [k for k, v in scores.iteritems() if v == min_scores]
 

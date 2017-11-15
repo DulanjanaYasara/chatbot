@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61297a0e-ef99-4757-832a-44965bc28896" name="Default" comment="Give values to the insert,update and remove functions of the tree.&#10;Approximate algorithm for the fine adjustment of the score of the dependency tree matching.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commons/dependencies/test/test_kb_spreadsheet.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/dulanjana.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/dulanjana.xml" />
+    <list default="true" id="61297a0e-ef99-4757-832a-44965bc28896" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commons/dependencies/test/outlier_find.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/dependencies/dependencies.py" afterPath="$PROJECT_DIR$/commons/dependencies/dependencies.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/dependencies/integrate.py" afterPath="$PROJECT_DIR$/commons/dependencies/integrate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/dependencies/main.py" afterPath="$PROJECT_DIR$/commons/dependencies/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/dependencies/map.py" afterPath="$PROJECT_DIR$/commons/dependencies/map.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/dependencies/test/test_kb_spreadsheet.py" afterPath="$PROJECT_DIR$/commons/dependencies/test/test_kb_spreadsheet.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/dependencies/zss/compare.py" afterPath="$PROJECT_DIR$/commons/dependencies/zss/compare.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/entity_scoring/based_on_trees.py" afterPath="$PROJECT_DIR$/projects/entity_scoring/based_on_trees.py" />
     </list>
     <ignored path="commons/corenlp/" />
     <ignored path="commons/stanford_pos_tagger/english-bidirectional-distsim.tagger" />
@@ -38,9 +36,11 @@
       <file leaf-file-name="integrate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commons/dependencies/integrate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-679">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="252">
+              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,8 +48,8 @@
       <file leaf-file-name="dependencies.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commons/dependencies/dependencies.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1924">
-              <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+            <state relative-caret-position="-2666">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#45#73#0" expanded="true" />
               </folding>
@@ -60,8 +60,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-466">
-              <caret line="13" column="74" lean-forward="true" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+            <state relative-caret-position="324">
+              <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -70,8 +70,8 @@
       <file leaf-file-name="test_kb_spreadsheet.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test_kb_spreadsheet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1330">
-              <caret line="36" column="11" lean-forward="false" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+            <state relative-caret-position="-1028">
+              <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -82,7 +82,7 @@
       <file leaf-file-name="test_kb.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test_kb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-540">
+            <state relative-caret-position="540">
               <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
               <folding />
             </state>
@@ -92,8 +92,8 @@
       <file leaf-file-name="map.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/commons/dependencies/map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="150" column="0" lean-forward="true" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+            <state relative-caret-position="-1694">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -112,23 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>corefs</find>
-      <find>P</find>
-      <find>Chosen answer index :</find>
-      <find>irect</find>
-      <find>dict</find>
-      <find>Failover Group</find>
-      <find>equal</find>
-      <find>WOW</find>
-      <find>update</find>
-      <find>new distance</find>
-      <find>pat</find>
-      <find>path</find>
-      <find>children</find>
-      <find>value</find>
-      <find>dpath</find>
-      <find>remove_cost</find>
-      <find>x</find>
       <find>score</find>
       <find>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</find>
       <find>#####</find>
@@ -139,9 +122,26 @@
       <find>Percentage</find>
       <find>'J'</find>
       <find>rb</find>
-      <find>'r'</find>
-      <find>'R'</find>
       <find>'not'</find>
+      <find>1.512</find>
+      <find>++++++++++++++++++++++++++++++++++</find>
+      <find>final</find>
+      <find>'R'</find>
+      <find>ret</find>
+      <find>gra</find>
+      <find>gracefu</find>
+      <find>grace</find>
+      <find>'p'</find>
+      <find>-rrb-</find>
+      <find>'-</find>
+      <find>b-</find>
+      <find>'r'</find>
+      <find>instead</find>
+      <find>'P'</find>
+      <find>%</find>
+      <find>\d{1,3}</find>
+      <find>\d{1,3}</find>
+      <find>\d{1,3} %</find>
     </findStrings>
     <replaceStrings>
       <replace>'A'</replace>
@@ -158,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/projects/SO_q_a_comparison_entities/main-compare-entities.py" />
         <option value="$PROJECT_DIR$/projects/SO_q_a_comparison_entities/spreadsheet.py" />
         <option value="$PROJECT_DIR$/commons/wso2_doc/pipelines.py" />
         <option value="$PROJECT_DIR$/projects/ordinary_tech_lang_entity_extraction/tecg_lang_entities.py" />
@@ -204,11 +203,12 @@
         <option value="$PROJECT_DIR$/commons/dependencies/test/test.py" />
         <option value="$PROJECT_DIR$/projects/entity_scoring/based_on_trees.py" />
         <option value="$PROJECT_DIR$/commons/dependencies/main.py" />
-        <option value="$PROJECT_DIR$/commons/dependencies/zss/compare.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/dependencies.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/test/outlier_find.py" />
         <option value="$PROJECT_DIR$/commons/dependencies/integrate.py" />
         <option value="$PROJECT_DIR$/commons/dependencies/test/test_kb_spreadsheet.py" />
-        <option value="$PROJECT_DIR$/commons/dependencies/dependencies.py" />
         <option value="$PROJECT_DIR$/commons/dependencies/map.py" />
+        <option value="$PROJECT_DIR$/commons/dependencies/zss/compare.py" />
       </list>
     </option>
   </component>
@@ -219,7 +219,6 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1" />
     <option name="y" value="-4" />
     <option name="width" value="960" />
     <option name="height" value="1035" />
@@ -240,6 +239,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="My workings" type="cbb8eebc:String" user="My workings" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,16 +275,12 @@
               <item name="dependencies" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
             <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="My workings" type="cbb8eebc:String" user="My workings" />
+              <item name="My workings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="My workings" type="462c0819:PsiDirectoryNode" />
+              <item name="commons" type="462c0819:PsiDirectoryNode" />
+              <item name="dependencies" type="462c0819:PsiDirectoryNode" />
+              <item name="zss" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -453,24 +459,6 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration name="compare" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/commons/dependencies/zss" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="My workings" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/dependencies/zss/compare.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="dependencies" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -489,6 +477,42 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="map" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/commons/dependencies" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/dependencies/map.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="outlier_find" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/commons/dependencies/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="My workings" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/dependencies/test/outlier_find.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -503,24 +527,6 @@
       <module name="My workings" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/dependencies/test/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="test_kb" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="My workings" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/dependencies/test/test_kb.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -545,18 +551,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.test" />
-      <item index="1" class="java.lang.String" itemvalue="Python.compare" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test_kb" />
-      <item index="3" class="java.lang.String" itemvalue="Python.dependencies" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test_kb_spreadsheet" />
+      <item index="1" class="java.lang.String" itemvalue="Python.dependencies" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test_kb_spreadsheet" />
+      <item index="3" class="java.lang.String" itemvalue="Python.map" />
+      <item index="4" class="java.lang.String" itemvalue="Python.outlier_find" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.test_kb_spreadsheet" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.dependencies" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test_kb" />
-        <item index="4" class="java.lang.String" itemvalue="Python.compare" />
+        <item index="1" class="java.lang.String" itemvalue="Python.outlier_find" />
+        <item index="2" class="java.lang.String" itemvalue="Python.map" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.dependencies" />
       </list>
     </recent_temporary>
   </component>
@@ -630,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510287726974</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="After doing many testing to the project.&#10;The accuracy rate of this is 61%.">
+      <created>1510643671579</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1510643671579</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -683,10 +696,10 @@
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69757175" sideWeight="0.511206" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45785877" sideWeight="0.49583334" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49337748" sideWeight="0.48879403" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4437086" sideWeight="0.49583334" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14679912" sideWeight="0.48879403" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5419426" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.178762" sideWeight="0.4941691" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17929563" sideWeight="0.4941691" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16008538" sideWeight="0.5058309" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54635763" sideWeight="0.49252936" order="3" side_tool="false" content_ui="tabs" />
@@ -721,7 +734,8 @@
     <MESSAGE value="Creation of the trees for the entity generation of the most specific WSO2 words.&#10;Using corenlp server for the process of the dependency matching of the question and answers." />
     <MESSAGE value="Give values to the insert,update and remove functions of the tree.&#10;Approximate algorithm for the fine adjustment of the score of the dependency tree matching." />
     <MESSAGE value="Performing the subtree edit operations successfully.&#10;Approximately obtaining a suitable function for the costs and scores. &#10;Clean and neat code prepared.&#10;&#10;Add unversioned project files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Performing the subtree edit operations successfully.&#10;Approximately obtaining a suitable function for the costs and scores. &#10;Clean and neat code prepared.&#10;&#10;Add unversioned project files" />
+    <MESSAGE value="After doing many testing to the project.&#10;The accuracy rate of this is 61%." />
+    <option name="LAST_COMMIT_MESSAGE" value="After doing many testing to the project.&#10;The accuracy rate of this is 61%." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -745,32 +759,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="58" />
+      <option name="time" value="61" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/commons/data/stackoverflow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/tests/dependency_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/SO_q_a_modification/extractData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/zss/simple_tree.py" />
     <entry file="file:///usr/local/lib/python2.7/dist-packages/zss/compare.py" />
     <entry file="file:///usr/local/lib/python2.7/dist-packages/zss/__init__.py" />
@@ -1014,44 +1007,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commons/dependencies/zss/compare.py">
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5143">
-          <caret line="150" column="4" lean-forward="false" selection-start-line="150" selection-start-column="4" selection-end-line="150" selection-end-column="4" />
-          <folding>
-            <element signature="e#194#212#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="293">
+          <caret line="25" column="57" lean-forward="true" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/numpy/core/fromnumeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="1729" column="4" lean-forward="false" selection-start-line="1729" selection-start-column="4" selection-end-line="1729" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="142" column="24" lean-forward="false" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commons/dependencies/zss/simple_tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1471">
+        <state relative-caret-position="-1604">
           <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commons/dependencies/main.py">
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/test/outlier_find.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="25" column="57" lean-forward="true" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commons/dependencies/integrate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-679">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="252">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commons/dependencies/dependencies.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1924">
-          <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        <state relative-caret-position="-2666">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#45#73#0" expanded="true" />
           </folding>
@@ -1060,16 +1068,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-466">
-          <caret line="13" column="74" lean-forward="true" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+        <state relative-caret-position="324">
+          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test_kb_spreadsheet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1330">
-          <caret line="36" column="11" lean-forward="false" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+        <state relative-caret-position="-1028">
+          <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -1078,16 +1086,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/commons/dependencies/test/test_kb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
+        <state relative-caret-position="540">
           <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/commons/dependencies/zss/compare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="259" column="47" lean-forward="true" selection-start-line="259" selection-start-column="47" selection-end-line="259" selection-end-column="47" />
+          <folding>
+            <element signature="e#194#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/commons/dependencies/map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="150" column="0" lean-forward="true" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+        <state relative-caret-position="-1694">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

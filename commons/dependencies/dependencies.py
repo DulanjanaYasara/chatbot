@@ -3,9 +3,12 @@
 from re import search, split
 
 from nltk import WordNetLemmatizer
+from nltk.stem import PorterStemmer
 from unidecode import unidecode
 
 from main import CoreNLP
+
+porter_stemmer = PorterStemmer()
 
 
 def __coreference(parsed_text):
@@ -67,7 +70,7 @@ def generate(dependency_parsed_text):
     for sentence in dependency_parsed_text['sentences']:
         # A dict to keep the word index of nouns, verbs, pronouns and WH verbs
         indices = {element['index']: element['pos'][0] for element in sentence['tokens'] if
-                   search(r'NN.*|VB.*|PRP.*|W.+', element['pos']) or element['word'].lower() == 'not'}
+                   search(r'^(NN.*|VB.*|PRP.*|W.+|RB.*|JJ.*)', element['pos'])}
         # Adding important element of ROOT
         indices[0] = 'A'
 
@@ -88,7 +91,8 @@ def generate(dependency_parsed_text):
             for index, value in enumerate(prep_indices):
 
                 if len(coref_prep_list) > index:
-                    combined_prep_dict[value] = coref_prep_list[index]
+                    combined_prep_dict[value] = \
+                        [x for x in coref_prep_list[index].split(' ') if not (x[0] == '-' and x[-1] == '-')][-1]
                 else:
                     # Removing the prepositions which doesn't have coreferences from the indices dict
                     del indices[value]
@@ -137,12 +141,14 @@ def lemmatizer(entity, v_n):
     :type entity: str
     """
 
+    result = ''
+
     if v_n == 'V':
-        return WordNetLemmatizer().lemmatize(entity.lower(), pos='v')
+        result = WordNetLemmatizer().lemmatize(entity.lower(), pos='v')
     elif v_n == 'N':
         # Conversion of plural words like 'APIs' into singular
         if search('([A-Z]s)$', entity):
-            return entity[:-1]
+            result = entity[:-1]
         else:
             # Lemming the last word
             words = tokenize_words(entity.lower())
@@ -156,12 +162,14 @@ def lemmatizer(entity, v_n):
                     out += str(e).upper() if len(last_word) > i and str(
                         last_word[i]).isupper() else e
                 words.append(out)
-                return str(' '.join(words))
+                result = str(' '.join(words))
 
             elif len(words) == 1:
-                return entity.lower()
+                result = entity.lower()
     else:
-        return entity.lower()
+        result = entity.lower()
+
+    return porter_stemmer.stem(result)
 
 
 def test():

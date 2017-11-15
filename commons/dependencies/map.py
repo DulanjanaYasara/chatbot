@@ -1,7 +1,6 @@
 import math
 import re
 
-import numpy
 from nltk.corpus import framenet as fn
 
 from zss import Node
@@ -77,7 +76,7 @@ def find_score(q_dependency_list, a_dependency_list):
         print q_dep
         print'_____________________________________________________________________________________________________________'
         q_entities = set(find_entities(q_dep))
-        common_entities = []
+        common_entities = set()
 
         for a_dep in a_dependency_list:
             a_entities = list(find_entities(a_dep))
@@ -87,24 +86,24 @@ def find_score(q_dependency_list, a_dependency_list):
             enhanced_distance = distance(tree(a_dep).children[0], tree(q_dep).children[0], get_children, insert_cost,
                                          remove_cost, update_cost)
             print '\033[94m', 'Enhanced distance :', enhanced_distance, '\033[0m'
-            new_distance = enhanced_distance / float(len(a_entities))
-            print 'New distance :', new_distance
             # Finding common entities
             common = q_entities.intersection(set(a_entities))
+            # Find new distance
+            new_distance = enhanced_distance / float(len(a_entities))
+            print 'New distance :', new_distance
             new_entities = [x for x in common if x not in common_entities]
             print 'new entities :', len(new_entities)
-            common_entities += new_entities
-            if new_entities:
-                costs.append(float(new_distance) / len(new_entities))
-            else:
-                costs.append(new_distance)
+            common_entities.update(new_entities)
+            new_distance /= float(len(new_entities) + 1)
+            costs.append(new_distance)
+        costs = [x / (len(common_entities) + 1) for x in costs]
 
-    var = numpy.var(numpy.array(costs))
+    print 'costs :', costs
     min_cost = min(costs)
-    print 'min :', min_cost, 'var :', var
     k = 0.8
-    final_cost = math.hypot(min_cost, k * var)
-
+    final_cost = 0
+    for c in costs:
+        final_cost = k * final_cost + (c - min_cost) * (1 - k)
     print '\033[92m', 'final cost      :', final_cost, '\033[0m'
     return final_cost
 
@@ -146,7 +145,6 @@ def update_cost(a, b):
         # If a and b have common frames
         return 0
     else:
-        # return (remove_cost(a) + insert_cost(b)) / 2
         return math.hypot(remove_cost(a), insert_cost(b))
 
 

@@ -48,8 +48,20 @@ def compare(true_ans, given_ans):
     return percentage
 
 
-def compare1(true, given):
-    return fuzz.partial_ratio(true, given)
+def compare1(true_ans, given_ans):
+    t_sent = sentence_phrases_separation(true_ans)
+    g_sent = sentence_phrases_separation(given_ans)
+    result = 0
+
+    for true_sent in t_sent:
+        for given_sent in g_sent:
+            given = ''.join(re.findall(r'[A-Za-z]', str(given_sent))).lower()
+            true = ''.join(re.findall(r'[A-Za-z]', str(true_sent))).lower()
+            if fuzz.partial_ratio(given, true) > 75:
+                result += 1
+                break
+    percentage = 100 * result / len(t_sent)
+    return percentage
 
 
 def fill_spreadsheet():

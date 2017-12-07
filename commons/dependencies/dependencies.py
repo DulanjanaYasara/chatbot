@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*
 from re import search, split
 
-from nltk import WordNetLemmatizer
+from nltk import WordNetLemmatizer, pprint
 from nltk.stem import PorterStemmer
 from unidecode import unidecode
 
@@ -63,15 +63,17 @@ def generate(dependency_parsed_text):
     :return: coreferences i.e. [{governor_word:noun_or_verb ,dependent_word:noun_or_verb},...]
     :rtype: list
     """
-    prep_dict = __prep_dic(__coreference(dependency_parsed_text))
-
+    try:
+        prep_dict = __prep_dic(__coreference(dependency_parsed_text))
+    except:
+        input(dependency_parsed_text)
     # To obtain the sentence number
     sent_num = 1
     for sentence in dependency_parsed_text['sentences']:
-        # A dict to keep the word index of nouns, verbs, pronouns and WH verbs
+        # A dict to keep the word index of nouns, verbs, pronouns, WH words, adjectives and adverbs
         indices = {element['index']: element['pos'][0] for element in sentence['tokens'] if
                    search(r'^(NN.*|VB.*|PRP.*|W.+|RB.*|JJ.*)', element['pos'])}
-        # Adding important element of ROOT
+        # Adding important element, ROOT
         indices[0] = 'A'
 
         # Checking for the availability of the 'ROOT' in the indices list. If not, adding them to 'indices' list,
@@ -152,20 +154,24 @@ def lemmatizer(entity, v_n):
         else:
             # Lemming the last word
             words = tokenize_words(entity.lower())
-            last_word = unidecode(words.pop())
-            lem_word = WordNetLemmatizer().lemmatize(last_word.lower(), pos='n')
-            # The lemmed word should have at least more than one character
-            # (Unless the lemmed word of 'xs', 'x' will also be considered)
-            if len(lem_word) > 1:
-                out = ''
-                for i, e in enumerate(lem_word):
-                    out += str(e).upper() if len(last_word) > i and str(
-                        last_word[i]).isupper() else e
-                words.append(out)
-                result = str(' '.join(words))
+            if words:
+                last_word = unidecode(words.pop())
+                lem_word = WordNetLemmatizer().lemmatize(last_word.lower(), pos='n')
+                # The lemmed word should have at least more than one character
+                # (Unless the lemmed word of 'xs', 'x' will also be considered)
+                if len(lem_word) > 1:
+                    out = ''
+                    for i, e in enumerate(lem_word):
+                        out += str(e).upper() if len(last_word) > i and str(
+                            last_word[i]).isupper() else e
+                    words.append(out)
+                    result = str(' '.join(words))
 
-            elif len(words) == 1:
-                result = entity.lower()
+                elif len(words) == 1:
+                    result = entity.lower()
+            else:
+                # For words which only have symbols
+                result = entity
     else:
         result = entity.lower()
 
@@ -177,16 +183,13 @@ def test():
     text1 = ''' What is the mediator to be used for lightweight transformations on messages?'''
     text2 = '''BPMN Explorer is the web application that allows you to view and work with BPMN processes. It is a 
     Jaggery-based, lightweight web application that you can customize and deploy in a web server. '''
-    text3 = '''In this case, the SOAP Header field To is matched against a regular expression that checks to see 
-    whether the To field contains StockQuote. validate [line 34 in ESB config] - Performs validation on the SOAP body 
-    using the XML Schema defined in the localEntry (line 2 in ESB config). on-fail [line 36 in ESB config] - If the 
-    validation fails, the on-fail element provides a detour, which can be used to channel the message through a 
-    different route and ultimately passed on to the intended service. In the example scenario, a fault is produced 
-    and the fault is sent back to the requesting client. send [line 44 in ESB config] - the send mediator is used to 
-    send the message to the intended receiver - however if the makeFault inside the on-fail element (line 37 in ESB 
-    config) is executed before this mediator is reached, then the fault is returned to the requesting client. '''
-    text3 = '''Is there commercial support available for WSO2 Enterprise Integrator?'''
-    print list(generate(dependency_parse.parse(text3)))
+    text3 = '''In this case, the SOAP Header field To is matched against a regular expression that checks to see whether the To field contains StockQuote. validate [line 34 in ESB config] - Performs validation on the SOAP body using the XML Schema defined in the localEntry (line 2 in ESB config). on-fail [line 36 in ESB config] - If the validation fails, the on-fail element provides a detour, which can be used to channel the message through a different route and ultimately passed on to the intended service. In the example scenario, a fault is produced and the fault is sent back to the requesting client. send [line 44 in ESB config] - the send mediator is used to send the message to the intended receiver - however if the makeFault inside the on-fail element (line 37 in ESB config) is executed before this mediator is reached, then the fault is returned to the requesting client.'''
+    text4 = '''Is there commercial support available for WSO2 Enterprise Integrator?'''
+    text5 = '''SimpleStockQuoteService:: Generating Market activity report for: [JLN, FDZ, EQR, XNV, RDR, CZC, LIY, ZEP, ZJX, GWO, STS, NQU, RMA, UUR, PFL, ZEF, IYU, ZLV, KTW, PUN, IOZ, PZJ, HAE, PSL, CQM, CLX, BWI, UYF, QWC, EKB, LMM, UQI, GZA, KRC, GFB, DWM, ETA, SRS, VEP, ZTS, TNE, FJF, LNV, QBY, ZIO, HBS, IIW, SNO, MMO, BTY, OGJ, OUW, CLW, OZT, MXB, HNK, FQC, VEI, BLD, LUP, PHR, JUQ, MZM, GIL, EVE, UAH, SHV, WYS, MAG, XBX, ZYB, MUX, MUO, DAM, DVR, RDF, LGB, KGS, DWP, ZAG, SDF, BSF, CTX, MKG, YTO, RRX, OVJ, MEZ, ODU, JGU, GQB, SLW, UCQ, GDI, DIO, BKV, UUQ, JES, TAZ, AAU]. SimpleStockQuoteService:: Full quote for: INFO - LogMediator Messaging_Channel = MARKET_ACTIVITY.'''
+    text6 = ''' ESB is an integration solution. It gives services to customers.'''
+    dpt = dependency_parse.parse(text6)
+    pprint(dpt)
+    print list(generate(dpt))
 
 
 if __name__ == "__main__":

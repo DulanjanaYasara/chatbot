@@ -76,6 +76,7 @@ class Extractor:
     @staticmethod
     def entity_generation(pos_tagged_tree):
         """Used for the entity generation using the chunked entity tree
+
         :type pos_tagged_tree: Tree
         """
         # Considering entities in the sentence
@@ -185,7 +186,7 @@ def search_acronyms(text):
     def repl(m):
         return acronym_dict[m.group(0).lower()]
 
-    return p.sub(repl, text)
+    return p.sub(repl, str(text))
 
 
 def comparator(entity_list1, entity_list2, threshold=0.93):

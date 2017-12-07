@@ -16,7 +16,7 @@ class StanfordAPI:
         self.port = port
         self.buffer = buffer_size
         self.process = Popen(
-            ['java', '-mx2g', '-cp', path_to_jar, 'edu.stanford.nlp.tagger.maxent.MaxentTaggerServer',
+            ['java', '-mx4g', '-cp', path_to_jar, 'edu.stanford.nlp.tagger.maxent.MaxentTaggerServer',
              '-model', path_to_model, '-port', '5000', '-sentenceDeLimiter', 'newline'])
         time.sleep(5)
 
@@ -46,12 +46,7 @@ def to_ascii(message):
 def test():
     """Test method for the Stanford API class"""
     stanford_api = StanfordAPI()
-    text = '''moçambique I'm attempting to produce a stream of comments from a Facebook page. 
-    Ultimately I'd like a response from WSO2 like this: I'm using the API module for WSO2 ESB to provide an 
-    abstraction layer over a Facebook page to get a simple stream of all the comments on a page after a given 
-    timestamp. The logic I'm working on right now is taking all the posts on a given Facebook page (using the WSO2 
-    Facebook Connector), iterating over all the posts (using an iterate mediator), checking if the post has comments 
-    (using the filter mediator), if there are comments I'm then iterating over the '''
+    text = '''Architects have invented a blend of integration patterns within enterprise systems.'''
     print(stanford_api.pos_tag(unidecode(text.decode('utf-8')).decode('ascii', 'ignore')))
 
 

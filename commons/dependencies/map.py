@@ -91,19 +91,26 @@ def find_score(q_dependency_list, a_dependency_list):
             # Find new distance
             new_distance = enhanced_distance / float(len(a_entities))
             print 'New distance :', new_distance
+            # Finding entities which intersect with the question entities, but not in the common_entities
             new_entities = [x for x in common if x not in common_entities]
             print 'new entities :', len(new_entities)
             common_entities.update(new_entities)
+            # new_distance is re-assigned
             new_distance /= float(len(new_entities) + 1)
             costs.append(new_distance)
+
         costs = [x / (len(common_entities) + 1) for x in costs]
 
     print 'costs :', costs
     min_cost = min(costs)
+
     k = 0.8
-    final_cost = 0
-    for c in costs:
-        final_cost = k * final_cost + (c - min_cost) * (1 - k)
+    # Computing final_cost with k% carrying cost contributions of previous sentences
+    carrying_cost = 0
+    for c in costs[::-1]:
+        carrying_cost = k * carrying_cost + (c - min_cost) * (1 - k)
+
+    final_cost = min_cost + carrying_cost
     print '\033[92m', 'final cost      :', final_cost, '\033[0m'
     return final_cost
 
@@ -145,6 +152,7 @@ def update_cost(a, b):
         # If a and b have common frames
         return 0
     else:
+        # Else the update cost is the hypotenuse of remove and insert costs
         return math.hypot(remove_cost(a), insert_cost(b))
 
 
@@ -163,14 +171,6 @@ def test():
           [(3, u'b', 'A'), (1, u'e', u'V')],
           [(3, u'b', 'A'), (2, u'f', u'V')],
           [(5, u'c', 'A'), (4, u'g', u'V')]]]
-    a1 = [[(0, u'root', 'A'), (1, u'a', u'V')],
-          [(1, u'a', 'A'), (3, u'c', u'V')],
-          [(1, u'a', 'A'), (2, u'b', u'V')],
-          [(2, u'b', 'A'), (4, u'f', u'V')],
-          [(4, u'f', 'A'), (7, u'g', u'V')],
-          [(4, u'f', 'A'), (8, u'h', u'V')],
-          [(3, u'c', 'A'), (5, u'd', u'V')],
-          [(3, u'c', 'A'), (6, u'e', u'V')]]
     dependencies = [[[(0, u'root', 'A'), (1, u'a', u'V')],
                      [(1, u'a', 'A'), (2, u'b', u'V')],
                      [(1, u'a', 'A'), (3, u'c', u'V')]]]

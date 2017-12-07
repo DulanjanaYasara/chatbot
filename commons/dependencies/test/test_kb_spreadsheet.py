@@ -1,9 +1,11 @@
 import re
+import string
 from time import time
 
 import requests
 from fuzzywuzzy import fuzz
 from pymongo import MongoClient
+from unidecode import unidecode
 
 from commons.dependencies.integrate import best_ans
 from commons.dependencies.main import CoreNLP
@@ -19,9 +21,9 @@ def ask_kb(question):
     )
 
     # Sending the request
-    response = requests.get('http://10.100.4.189:5000/content', params=params)
+    response = requests.get('http://http://203.94.95.153/content', params=params)
     output = response.json()
-    for out in output['answers'][:5]:
+    for out in output['answers']:
         yield out['answer']
 
 
@@ -40,7 +42,7 @@ def compare(true_ans, given_ans):
     sentences = sentence_phrases_separation(true_ans)
     str_regex = re.compile(r'[A-Za-z0-9]')
     for sent in sentences:
-        sent_str = ''.join(re.findall(str_regex, str(sent).lower()))
+        sent_str = ''.join(re.findall(str_regex, str(unidecode(sent)).lower()))
         if sent_str in given_ans_str:
             result += 1
     percentage = (result / float(len(sentences))) * 100
@@ -64,7 +66,7 @@ def compare1(true_ans, given_ans):
     return percentage
 
 
-def fill_spreadsheet():
+def fill_spreadsheet(choices=20):
     all_spreadsheet = connector.import_column_all("Sample Questions", sheet_no=2, column_index=1)
 
     for index, val in enumerate(all_spreadsheet):
@@ -78,7 +80,10 @@ def fill_spreadsheet():
         print '\033[1m', question, '\033[0m'
         print 'Answers  :'
 
-        letter = {1: 'C', 2: 'D', 3: 'E', 4: 'F', 5: 'G'}
+        letter = {}
+        for i in range(choices):
+            letter[i + 1] = string.ascii_uppercase[2 + i]
+
         for i, v in enumerate(given_answers):
             print str(i + 1), ')', v
 
@@ -86,7 +91,7 @@ def fill_spreadsheet():
         connector.export_cell_range("Sample Questions", given_answers, sheet_no=2, cell_range=cell_range)
 
 
-def ask_dependency(no_qs=47):
+def ask_dependency(no_qs=69, choices=10):
     final_results = []
 
     print 'Importing spreadsheet ....   ',
@@ -94,7 +99,7 @@ def ask_dependency(no_qs=47):
     print 'Done !!!'
     for index, val in enumerate(all_spreadsheet[1:no_qs + 1]):
         question = val[0]
-        answer_list = [x for x in val[1:] if x]
+        answer_list = [x for x in val[1:] if x][:choices - 1]
 
         if answer_list[1] == 'Sorry, I don\'t know the answer for that.':
             print 'Skipping .... Question ', str(index + 1)

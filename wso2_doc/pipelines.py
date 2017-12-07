@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 from collections import Counter
 from math import log
-from re import sub
+from re import sub, search
 from string import uppercase
 from time import sleep
 
 from pymongo import MongoClient
+from pymongo.errors import DuplicateKeyError
 
 from commons.data.entity import Extractor
 from commons.data.entity import search_acronyms
@@ -143,32 +144,63 @@ class MongoPipeline(object):
 
             return best_name
 
-        self.db[self.collection_name].insert_one(item)
+        try:
+            self.db[self.collection_name].insert_one(item)
+        except DuplicateKeyError:
+            print '\033[93m','Key already exists, the requested page url already visited!!!','\033[0m'
+            return item
+
         score_col = self.db[self.score_collection]
         parameters = ['title', 'imp1', 'imp2', 'plain']
 
         for criteria in parameters:
             for entity in item[criteria]:
                 new_entity = search_acronyms(entity['entity'])
-                new_id = sub(r'[\s-]+', '', str(new_entity).lower())
-                result = score_col.find_one({'_id': new_id})
-                if result:
-                    score_col.update_one({
-                        '_id': new_id
-                    }, {
-                        '$set': {
-                            'name': compare(new_entity, result['name']),
-                            'f': entity['f'] + result['f'],
-                            'score': entity['score'] + result['score']
-                        }
-                    }, upsert=False)
-                else:
-                    score_col.insert_one({
-                        '_id': new_id,
-                        'name': new_entity,
-                        'f': entity['f'],
-                        'score': entity['score']
-                    })
+                if filter_entity(new_entity):
+                    new_id = sub(r'[\s-]+', '', str(new_entity).lower())
+                    result = score_col.find_one({'_id': new_id})
+                    if result:
+                        score_col.update_one({
+                            '_id': new_id
+                        }, {
+                            '$set': {
+                                'name': compare(new_entity, result['name']),
+                                'f': entity['f'] + result['f'],
+                                'score': entity['score'] + result['score']
+                            }
+                        }, upsert=False)
+                    else:
+                        score_col.insert_one({
+                            '_id': new_id,
+                            'name': new_entity,
+                            'f': entity['f'],
+                            'score': entity['score']
+                        })
         # raw_input()
         sleep(0.1)
         return item
+
+
+def filter_entity(entity):
+    """Used to filter the entities based on their importance
+
+    :type entity: str
+    :rtype: bool
+    """
+    # List of example words that are ignored are given below
+
+    # https://abc.com
+    # ftp://xyz.lk
+    # esb/<hostname>
+    # localhost:4000
+    # {attr
+    # <config>
+    # www.pqr.lk
+    # #esb
+    # @home
+    # client.id
+    # 3ff4
+    # _name
+    # =externaldb
+
+    return search(r'(tp(s)?://)|(<.+?>)|(:\d{2,})|(^[<{])|(w{3}\.)|([#@.])|(^\d+\w+(?=\d))|(^[_=])', entity) is None

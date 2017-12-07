@@ -102,5 +102,5 @@ def ordinary_entity_generation():
 
 
 if __name__ == '__main__':
-    tech_entity_generation()
-    # ordinary_entity_generation()
+    # tech_entity_generation()
+    ordinary_entity_generation()

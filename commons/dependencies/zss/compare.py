@@ -305,7 +305,7 @@ def distance(A, B, get_children, insert_cost, remove_cost, update_cost):
 
 def enhanced_distance(edit_seq_path, edit_seq_value):
     """
-    Gives more enhanced distance to the tree based on the value of sub tree edit operations
+    Gives enhanced distance to the tree based on the value of sub tree edit operations
 
     :type edit_seq_path: list
     :type edit_seq_value: list
@@ -337,6 +337,7 @@ def enhanced_distance(edit_seq_path, edit_seq_value):
             count = 1
         else:
             # v = 'm'
+            # dist +=0
             count = 1
 
     return dist
@@ -348,7 +349,7 @@ def subtree_edit_operations(indexed_s1, indexed_s2, s1_tree, s2_tree):
     :type indexed_s1: list
     :type indexed_s2: list
     :param indexed_s1: The post order traversal of the s1 tree indexes (e.x. [0,2,4,_,_,_,7])
-    :param indexed_s2: The post order traversal of the s2 tree indexes (e.x. [1,_,_,_,3,5,6])
+    :param indexed_s2: The post order traversal of the s2 tree indexes (e.x. [1,_,_,3,5,6,7])
 
     :type s1_tree: Node
     :type s2_tree: Node
@@ -359,50 +360,50 @@ def subtree_edit_operations(indexed_s1, indexed_s2, s1_tree, s2_tree):
     # s1 and s2 are the post order traversals of question and the answer in the optimal alignment
 
     global edit_sequence
-    l = len(edit_sequence)
+    length = len(edit_sequence)
 
     while True:
-        e_root = edit_sequence[l - 1]
-        f = l
+        e_root = edit_sequence[length - 1]
+        f = length
 
         while True:
             while f >= 2 and edit_sequence[f - 2] == e_root:
                 f -= 1
 
-            if (l > f >= 2 and edit_sequence[f - 2] != e_root) or (f == 1) or (l == 1):
+            if (length > f >= 2 and edit_sequence[f - 2] != e_root) or (f == 1) or (length == 1):
                 break
 
-            if f == l:
-                l -= 1
-                e_root = edit_sequence[l - 1]
-                f = l
+            if f == length:
+                length -= 1
+                e_root = edit_sequence[length - 1]
+                f = length
 
         f0 = f
-        while f < l:
-            while f < l:
+        while f < length:
+            while f < length:
                 is_subtree = True
 
-                while f < l and is_subtree:
-                    s1_condition = subtree(indexed_s1[f - 1:l], s1_tree)
-                    s2_condition = subtree(indexed_s2[f - 1:l], s2_tree)
+                while f < length and is_subtree:
+                    s1_condition = subtree(indexed_s1[f - 1:length], s1_tree)
+                    s2_condition = subtree(indexed_s2[f - 1:length], s2_tree)
 
                     if (e_root == 'd' and s1_condition) or (e_root == 'i' and s2_condition) or (
                                     e_root in ['x', 'm'] and (s1_condition and s2_condition)):
-                        for i in range(f - 1, l - 1):
+                        for i in range(f - 1, length - 1):
                             edit_sequence[i] = '+'
 
-                        l = f - 1
+                        length = f - 1
                         f = f0
                     else:
                         is_subtree = False
                 f = f + 1
 
-            l = l - 1
+            length = length - 1
             f = f0
 
-        l = f0 - 1
+        length = f0 - 1
 
-        if l <= 0: break
+        if length <= 0: break
 
     return edit_sequence
 
@@ -466,9 +467,6 @@ def test():
         Node('c').addkid(Node('g'))).addkid(Node('d'))
     t2 = Node('a').addkid(Node('c').addkid(Node('g'))).addkid(
         Node('d').addkid(Node('x').addkid(Node('y')).addkid(Node('z'))))
-    t3 = Node('a').addkid(Node('b')).addkid(Node('c'))
-    t4 = Node('a').addkid(Node('b').addkid(Node('f').addkid(Node('g')).addkid(Node('h')))).addkid(
-        Node('c').addkid(Node('d')).addkid(Node('e')))
     enhanced_distance(['m', '+', '+', '+', 'd', '+', 'd', 'm', '+', 'x'],
                       [0, 0.05555555555555555, 0.05555555555555555, 0.05555555555555555, 0.2, 0.4, 3.0, 0, 0.5, 0])
 

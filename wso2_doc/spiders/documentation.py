@@ -47,9 +47,13 @@ class DocumentationSpider(CrawlSpider):
         'DVS380'
     ]
 
-    start_urls = [str('https://docs.wso2.com/display/' + p) for p in doc_urls]
-    # start_urls = ['https://docs.wso2.com/display/EI611/JMS+Support']
-    re_allowed = r'.*com\/display\/(%s).*' % '|'.join(doc_urls)
+    # Since FAQ pages are not crawled by the crawler they have to be given explicitly
+    faq_urls = [url + '/FAQ' for url in doc_urls]
+
+    start_urls = [str('https://docs.wso2.com/display/' + p) for p in doc_urls + faq_urls]
+    # start_urls = ['https://docs.wso2.com/display/IS530/User+Account+Locking+and+Account+Disabling']
+    re_allowed = r'.*com\/display\/(%s).*' % '|'.join(doc_urls + faq_urls)
+
     rules = [Rule(LinkExtractor(allow=[re_allowed]), callback="parse_item", follow=True)]
 
     @staticmethod
@@ -60,7 +64,11 @@ class DocumentationSpider(CrawlSpider):
         print('Processing..' + response.url)
         print '\033[0m',
 
-        html = response.xpath("//div[@id='main-content'and @class='wiki-content']").extract_first().strip()
+        try:
+            html = response.xpath("//div[@id='main-content'and @class='wiki-content']").extract_first().strip()
+        except AttributeError:
+            # Passing the urls which don't have the specified page format
+            return
 
         # Making non-decodable ascii codecs into decodable
         clean_html = normalize('NFKD', u'%s' % html).encode('ascii', 'ignore').decode('ascii', 'ignore')
@@ -74,7 +82,8 @@ class DocumentationSpider(CrawlSpider):
             '_id': str(response.url).split('?', 1)[0],
             'title': response.xpath("//h1[@id='title-text']//*/text()").extract_first(),
             'imp1': response.xpath(
-                "//div[@id='main-content'and @class='wiki-content']//*/text()[not(ancestor::div[contains(@class,"
+                "//div[@id='main-content'and @class='wiki-cont"
+                "ent']//*/text()[not(ancestor::div[contains(@class,"
                 "'code panel') or contains(@class,'expand-container')] or ancestor::code or ancestor::pre) and ( "
                 "ancestor::h1 or ancestor::h2 or ancestor::h3 or ancestor::h4 "
                 "or ancestor::h5 or ancestor::th)]").extract(),

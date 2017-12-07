@@ -57,34 +57,6 @@ def test():
                and then select the required endpoint type from the list. Do the following: Enter the basic details for the
                child endpoint, such as the name and address. '''
                ]
-    q_text2 = '''What is Enterprise Integrator? '''
-    a_text2 = ['''WSO2 Enterprise Integrator (WSO2 EI) is a comprehensive integration solution that enables
-    communication among various, disparate applications. Instead of having your applications communicate directly
-    with each other in all their various formats, each application simply communicates with WSO2 EI, which acts
-    mainly as an ESB to handle transforming and routing the messages to their appropriate destinations. The WSO2 EI
-    product can be used to manage short-running, stateless integration flows (using the ESB profile) as well as
-    long-running, stateful business processes (using the Business Process profile). The product also includes a
-    separate Analytics profile for comprehensive monitoring, a Message Broker profile (WSO2 MB) that can be used for
-    reliable messaging, as well as the WSO2 MSF4 j profile, which you can use to run microservices for your
-    integration flows. The ESB profile in WSO2 EI provides its fundamental services through an event-driven and
-    standards-based messaging engine (the bus), which allows integration architects to exploit the value of messaging
-    without writing code. This ESB profile is a step ahead of the previous releases of WSO2 Enterprise Service Bus,
-    as it provides data integration capabilities within the same runtime.''',
-               '''In this guide, we have shown how each pattern in the patterns catalog can be simulated using various
-             constructs in the ESB profile of WSO2 Enterprise Integrator (EI) . Click on a topic in the list below for
-             details.''',
-               '''If you have not done so already, download the latest version of WSO2 Enterprise Integrator. Extract
-               the archive file to a dedicated directory for WSO2 Enterprise Integrator, which will hereafter be
-               referred to as <EI_HOME>.''']
-    q_text = '''How to change the default database? '''
-    a_text = ['''Note that the Message Broker profile in WSO2 EI contains a default broker-specific database in
-    addition to the Carbon database. You can change the default database configurations in each of the EI profiles by
-    setting up new physical databases, and updating the relevant configurations in each profile. We recommend the use
-    of an industry-standard RDBMS such as Oracle, PostgreSQL, MySQL, MS SQL, etc. when you set up your production
-    environment. For information on setting up a new database for your profile, see Setting up the Physical Database
-    in the WSO2 Administration Guide. Add the database drivers to the <EI_HOME>/lib/directory when setting up the
-    database.''',
-              '''To change the default database configurations for WSO2 DAS, see Working with Databases.''']
     q = '''Can I use BPMN instead of BPEL via the Business Process profile? '''
     a = ['''The Business Process Profile supports both BPMN and BPEL.''']
     print best_ans(dependency_parse, q, a)
